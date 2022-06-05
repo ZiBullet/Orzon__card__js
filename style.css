@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+:root {
+    /* Colors */
+    --color-green: #3da64f;
+    --color-grey: #cccccc;
+    --color-red: #ea1e1e;
+    --main-width: 90%;
+    /* Borders */
+    --border-grey: 1px solid #cccccc;
+    --border-radius: 8px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+main {
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    width: var(--main-width);
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* width: 10%; */
+}
+.card__box {
+    width: 100%;
+    padding: 30px 30px 30px 30px;
+    border: var(--border-grey);
+    transition: .2s ease;
+
+}
+.card__box:hover {
+    box-shadow: 1px 1px 10px rgb(65, 64, 64),
+    -1px -1px 10px rgb(98, 98, 98);
+}
+.card__box:hover .card__item .icons {
+    right: 0;
+}
+.card__item img:not(.icons img) {
+    width: 300px;
+}
+.card__item {
+    overflow: hidden;
+    position: relative;
+}
+.card__item .icons {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 15px;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    transition: .4s ease;
+
+}
+.card__item .icons img {
+    background-color: transparent;
+    box-shadow: 0 0 5px #000;
+    width: 26px;
+    height: 26px;
+    padding: 3px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: .3s ease;
+}
+.card__item .icons img:hover {
+    background-color: var(--color-green);
+}
+.card__item__details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card__item__details a {
+    color: #000;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 2em;
+    transition: .3s ease;
+}
+.card__item__details a:hover {
+    color: var(--color-green);
+}
+.status {
+    font-size: 14px;    
+    text-decoration: dashed;
+    color: var(--color-green);
+}
+.price span {
+    font-size: 17px;
+    font-weight: 900;
+}
+/* .counter {
+    margin-top: 10px;
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+}
+.add__remove {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--color-grey);
+}
+.add__remove button {
+    font-size: 20px;
+    background: none;
+    border: none;
+}
+.fav {
+    display: flex;
+    align-items: center;
+} */
